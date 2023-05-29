@@ -18,7 +18,7 @@ export class Track {
         this.artist = artist
     }
 
-    public get youtubeName(): string {
+    public get searchableName(): string {
         return `${this.title} - ${this.artist}`
     }
 }

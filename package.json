@@ -1,35 +1,44 @@
 {
-  "name": "tune-slicer",
-  "version": "0.1.0",
-  "description": "Utility for getting information about and downloading + separating tracks into vocal and accompaniment parts",
-  "main": "dist/main.js",
-  "scripts": {
-    "start": "tsc && node dist/main.js",
-    "lint": "eslint . --ext .ts",
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chidiebereokpoechi/tune-slicer.git"
-  },
-  "keywords": [
-    "tune",
-    "slice",
-    "track",
-    "song",
-    "slicer"
-  ],
-  "author": "Chidiebere Okpoechi",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/chidiebereokpoechi/tune-slicer/issues"
-  },
-  "homepage": "https://github.com/chidiebereokpoechi/tune-slicer#readme",
-  "devDependencies": {
-    "@types/node": "^20.2.4",
-    "@typescript-eslint/eslint-plugin": "^5.59.7",
-    "@typescript-eslint/parser": "^5.59.7",
-    "eslint": "^8.41.0",
-    "typescript": "^5.0.4"
-  }
+    "name": "tune-slicer",
+    "version": "0.1.0",
+    "description": "Utility for getting information about and downloading + separating tracks into vocal and accompaniment parts",
+    "main": "dist/main.js",
+    "scripts": {
+        "start": "tsc && node dist/main.js",
+        "lint": "eslint . --ext .ts",
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/chidiebereokpoechi/tune-slicer.git"
+    },
+    "keywords": [
+        "tune",
+        "slice",
+        "track",
+        "song",
+        "slicer"
+    ],
+    "author": "Chidiebere Okpoechi",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/chidiebereokpoechi/tune-slicer/issues"
+    },
+    "homepage": "https://github.com/chidiebereokpoechi/tune-slicer#readme",
+    "devDependencies": {
+        "@types/lodash": "^4.14.195",
+        "@types/luxon": "^3.3.0",
+        "@types/node": "^20.2.4",
+        "@typescript-eslint/eslint-plugin": "^5.59.7",
+        "@typescript-eslint/parser": "^5.59.7",
+        "eslint": "^8.41.0",
+        "typescript": "^5.0.4"
+    },
+    "dependencies": {
+        "axios": "^1.4.0",
+        "dotenv": "^16.0.3",
+        "lodash": "^4.17.21",
+        "luxon": "^3.3.0",
+        "winston": "^3.9.0"
+    }
 }
