@@ -13,7 +13,7 @@ export interface SpotifyTrack {
     readonly external_urls: {
         spotify: string
     }
-    readonly preview_url: string
+    readonly preview_url: Nullable<string>
 }
 
 export interface SpotifyTrackSearchResponse {

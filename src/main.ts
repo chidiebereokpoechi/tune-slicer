@@ -1,11 +1,13 @@
 import 'dotenv/config'
-import './lib/env'
+import './lib/config'
 
-import { baseLogger } from './lib'
-import { SpotifyService } from './services/spotify'
+import { TuneSlicer } from './core'
 
 const main = async () => {
-    const spotifyService = new SpotifyService(baseLogger)
+    const core = new TuneSlicer()
+    const tracks = await core.searchTracks({ name: 'Un poco loco' })
+    const track = tracks[0]
+    await core.processTrack(track)
 }
 
 main()

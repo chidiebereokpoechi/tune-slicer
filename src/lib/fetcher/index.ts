@@ -17,8 +17,6 @@ const request = async <Body, Response>(
         logger.info(`Making ${method} request to ${url}`, options)
 
         const response = await axios.request(mapRequestOptionsToAxios(options))
-        logger.info('Response', response)
-
         return response.data
     } catch (error) {
         const requestError =

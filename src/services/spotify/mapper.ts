@@ -7,6 +7,7 @@ export const mapSpotifyTrackToDomain = (track: SpotifyTrack): Track => {
         name: title,
         external_ids: { isrc },
         duration_ms,
+        preview_url,
     } = track
 
     const artist = track.artists[0]
@@ -14,5 +15,11 @@ export const mapSpotifyTrackToDomain = (track: SpotifyTrack): Track => {
         length: Duration.fromMillis(duration_ms),
     }
 
-    return new Track(isrc, trackInformation, title, artist.name)
+    return new Track(
+        isrc,
+        trackInformation,
+        title,
+        artist.name,
+        preview_url ?? undefined,
+    )
 }
