@@ -8,6 +8,8 @@ interface Configuration {
     successCodes?: number[]
 }
 
+type Args = (string | [string, string])[]
+
 export class Runner {
     private readonly name: string
     private readonly executablePath: string
@@ -31,11 +33,11 @@ export class Runner {
         }
     }
 
-    private normalizeArgs(args: string[]): string {
+    private normalizeArgs(args: Args): string {
         return join(flatten(args), ' ')
     }
 
-    public run(args: string[]): Promise<number> {
+    public run(args: Args): Promise<number> {
         const normalizedArgs = this.normalizeArgs(args)
         const command = `${this.executablePath} ${normalizedArgs}`
         const conciseCommand = `${this.name} ${normalizedArgs}`
@@ -82,7 +84,7 @@ export class Runner {
                     code,
                 }
 
-                if (code && includes(this.config.successCodes, code)) {
+                if (code !== null && includes(this.config.successCodes, code)) {
                     this.logger.info(
                         `${this.name} finished executing successfully`,
                         context,

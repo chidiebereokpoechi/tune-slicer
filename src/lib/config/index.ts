@@ -60,7 +60,7 @@ export class Config {
                 `../../../bin/${platform}/yt-dlp`,
             ),
             downloadPath: path.resolve(__dirname, '../../../downloads'),
-            allowanceInSeconds: 2,
+            allowanceInSeconds: 3,
         }
     }
 

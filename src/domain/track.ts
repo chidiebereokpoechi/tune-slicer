@@ -26,6 +26,6 @@ export class Track {
     }
 
     public get formattedName(): string {
-        return `${this.title} by ${this.artist}`
+        return `${this.title} - ${this.artist}`
     }
 }
